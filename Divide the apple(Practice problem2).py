@@ -9,6 +9,10 @@ while True:
 
     if mn == mx:
         print("This is not a range and here mn is equal to mx")
+        
+    elif mn>mx:
+        print("This is not a range because the minimum is greater than maximum")
+
     else:
 
         while mn <= mx:
@@ -20,6 +24,7 @@ while True:
                 mn = mn + 1
 
     break
+
 
 
 
