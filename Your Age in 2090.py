@@ -1,10 +1,17 @@
+Year = int(input("And enter the current year"))
 Age = int(input("Enter your Current Age"))
 
-Year = int(input("And enter the current year"))
 
-if Year>2025:
+
+if Year>=2020:
     print('You are not born yet!!!')
+    exit()
+
+elif Age>=100:
+    print("You seems like the oldest person")
+    exit()
 else:
+
     while Age <= 100:
         Year = Year + 1
         Age = Age + 1
