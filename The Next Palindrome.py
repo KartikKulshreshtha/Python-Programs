@@ -5,7 +5,11 @@ except Exception as e:
     print("Please enter a number only")
     exit()
 for i in range(Cases):
-    Number = int(input(f"Enter the number of size {Cases}\n"))
+    try:
+        Number = int(input(f"Enter the number of size {Cases}\n"))
+    except Exception as e:
+        print("The Input is must be a number")
+        exit()
     Number2 = Number
     while 1:
         Number = int(Number)
