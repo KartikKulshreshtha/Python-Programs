@@ -1,3 +1,7 @@
+#Author = Kartik Kulshreshtha
+#Purpose = Practicing of Python
+#Date = 20/01/2021
+
 N = 6
 a = int(input("Enter the number a : \n"))
 b = int(input("Enter the number b : \n"))
