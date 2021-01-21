@@ -2,15 +2,17 @@
 #Purpose = Practicing of Python
 #Date = 20/01/2021
 
+import random
 
-N = 6
 a = int(input("Enter the number a : \n"))
 b = int(input("Enter the number b : \n"))
+N = random.randint(a,b)
 
 count = 0
 
 print("Player 1:\n")
 print(f"Please guess the number between {a} to {b}\n")
+
 while True:
     Number = int(input(f'Guess the Number please : \n'))
     if Number == N:
@@ -28,7 +30,8 @@ while True:
 
     count = count+1
 
-print(f"You Guess the correct number in {count} times...\n")
+if Number == N:
+    print(f"You Guess the correct number in {count} times...\n")
 
 Count = 0
 print("Player 2:\n")
@@ -50,15 +53,15 @@ while True:
 
     Count = Count+1
 
-print(f"You Guess the correct number in {Count} times...")
+if Number == N:
+    print(f"You Guess the correct number in {Count} times...\n")
 
 
 if Count > count:
-    print(f"Player 1 Won the game because he guessed the number in {Count} time and Player 2 guessed the number in {count} time")
+    print(f"Player 1 Won the game because he guessed the number in {count} time and Player 2 guessed the number in {Count} time")
 elif Count == count:
     print(f"The game is tied because Player 1 and Player 2 both guessed the number in same times")
 else:
-    print(f'Player 2 Won the game because he guessed the number in {count} time and Player 1 guessed the number in {Count} time')
-
+    print(f'Player 2 Won the game because he guessed the number in {Count} time and Player 1 guessed the number in {count} time')
 
 
