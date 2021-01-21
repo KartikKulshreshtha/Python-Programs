@@ -2,6 +2,7 @@
 #Purpose = Practicing of Python
 #Date = 20/01/2021
 
+
 N = 6
 a = int(input("Enter the number a : \n"))
 b = int(input("Enter the number b : \n"))
@@ -53,11 +54,11 @@ print(f"You Guess the correct number in {Count} times...")
 
 
 if Count > count:
-    print(f"Player 2 Won the game because he guessed the number in {Count} time and Player 1 guessed the number in {count} time")
+    print(f"Player 1 Won the game because he guessed the number in {Count} time and Player 2 guessed the number in {count} time")
 elif Count == count:
     print(f"The game is tied because Player 1 and Player 2 both guessed the number in same times")
 else:
-    print(f'Player 1 Won the game because he guessed the number in {count} time and Player 1 guessed the number in {Count} time')
+    print(f'Player 2 Won the game because he guessed the number in {count} time and Player 1 guessed the number in {Count} time')
 
 
 
