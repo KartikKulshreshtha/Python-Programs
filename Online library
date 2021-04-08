@@ -1,0 +1,65 @@
+list_of_books = {"Mathematics": "Sumit", "Science": "Available"}
+class Library:
+
+    def __init__(self,list_of_books,Name):
+        self.listofbooks = list_of_books
+        self.Name = Name
+
+    @classmethod
+    def Display(cls,list_of_books):
+        print(f"Total books in my library are {list_of_books}")
+
+    @classmethod
+    def Lend(cls,list_of_books):
+        Book_name = input("Enter the name of the book")
+        Book_name = Book_name.capitalize()
+        Owner_name = input("Enter your name")
+
+        if Book_name in list_of_books.keys() and list_of_books[Book_name]=="Available":
+            print("Congrats the book name you have entered is available in this library")
+        elif Book_name in list_of_books.keys() and list_of_books[Book_name]!="Available":
+            print(f"Opps sorry! The book has been lended by {list_of_books[Book_name]}")
+        else:
+            print("Sorry the book is not available in the library")
+
+    @classmethod
+    def Add(cls,list_of_books):
+        Book_name = input("Enter the name of the book which you want to donate")
+        Book_name = Book_name.capitalize()
+        list_of_books.update({Book_name:"Available"})
+        print("Book is added Successfully!!!!")
+
+    @classmethod
+    def Return(cls,list_of_books):
+        Book_name = input("Enter the name of the book which you want to return")
+        Book_name = Book_name.capitalize()
+        Owner_name = input("Enter your name")
+        Owner_name = Owner_name.capitalize()
+        list_of_books[Book_name] = "Available"
+        print("Book is returned successfully")
+
+    @classmethod
+    def Delete(cls,list_of_books):
+        Book_name = input("Enter the name of the books which you want to delete from the library")
+        Book_name = Book_name.capitalize()
+        list_of_books.__delitem__(Book_name)
+        print("The book is deleted successfully")
+
+Books = Library(list_of_books,"Kartik's Library")
+while 1:
+    print(f"Welcome to My {Books.Name}")
+    choice = input("Enter your Choice please : ")
+    if choice.capitalize() == "Display":
+        Books.Display(list_of_books)
+    elif choice.capitalize() == "Add":
+        Books.Add(list_of_books)
+    elif choice.capitalize() == "Lend":
+        Books.Lend(list_of_books)
+    elif choice.capitalize() == "Return":
+        Books.Return(list_of_books)
+    elif choice.capitalize() == "Delete":
+        Books.Delete(list_of_books)
+    elif choice.capitalize() == "Quit":
+        list_of_books = list_of_books
+    else:
+        print("Invalid choice")
