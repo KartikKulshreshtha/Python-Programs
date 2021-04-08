@@ -1,0 +1,17 @@
+from win32com.client import Dispatch
+
+speak = Dispatch("SAPI.SpVoice")
+speak.Speak("The Supreme Court on Wednesday admitted a plea by the Centre seeking exemption for"
+            " armed forces personnel to be prosecuted for adulterous acts. The Supreme Court "
+            "had, in September 2018, declared the offence of adultery under Section 497 of the"
+            " Indian Penal Code (IPC) unconstitutional. An application filed by the Ministry of"
+            " Defence (MoD) seeking clarification to this effect was taken up by a three-judge "
+            "bench headed by Justice RF Nariman on Wednesday. At torney General KK Venugopal, "
+            "appearing for MoD, told the court that the September 27, 2018 judgment of the "
+            "court in the Joseph Shine v Union of India case, striking down adultery as an"
+            " offence could come in the way of armed forces personnel being convicted for "
+            "adulterous acts under the Army Act, Navy Act and Air Force Act. "
+            "Also Watch: ‘Farmers won’t participate’: Protestors reject SC order for talks"
+            " with panel. Venugopal said, “The Army, Navy and Air Force have provisions under"
+            " which those caught in adulterous acts are liable to be punished for unbecoming"
+            " conduct by which they can be court-martialed.”")
